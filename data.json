@@ -1,3 +1,14 @@
 {
-  
+  "foo": "foo",
+  "bar": {
+    "foo1": "foo1",
+    "bar1": {
+      "foo2": {}
+    }
+  },
+  "baz": [],
+  "fa": false,
+  "fo": true,
+  "meh": null,
+  "num": 1.1
 }
