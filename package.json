@@ -1,0 +1,11 @@
+{
+  "name": "json-explorer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./index"
+  },
+  "author": "Houzair Koussa",
+  "license": "ISC",
+  "type": "module"
+}
