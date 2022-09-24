@@ -2,16 +2,14 @@ import Data from "./data.json" assert { type: "json" };
 
 console.log("Raw Data", Data);
 
-const handleObjectType = (object) => {
+const handleObjectType = (object, callback) => {
   if (object === null) {
     console.log(object, "Null");
-    return false;
   } else if (Array.isArray(object)) {
     console.log(object, "Array");
-    return false;
   } else {
     console.log(object, "Object");
-    return true;
+    callback(object);
   }
 }
 
@@ -34,8 +32,7 @@ const exploreJson = (json) => {
         break;
 
       case 'object':
-        const isObject = handleObjectType(jsonKeyValue);
-        if (isObject) exploreJson(jsonKeyValue); // !
+        handleObjectType(jsonKeyValue, exploreJson);
         break;
 
       default:
